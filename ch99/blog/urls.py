@@ -1,14 +1,18 @@
 from django.urls import path, re_path
 from blog import views
 
+
 app_name = 'blog'
 urlpatterns = [
 
     # Example: /blog/
     path('', views.PostLV.as_view(), name='index'),
 
-    # Exmaple: /blog/post/django-example/
-    re_path(r'^post/(?P<slug>[-\w]+)/$', views.PostLV.as_view(), name='post_detail'),
+    # Example: /blog/post/ (same as /blog/)
+    path('post/', views.PostLV.as_view(), name='post_list'),
+
+    # Example: /blog/post/django-example/
+    re_path(r'^post/(?P<slug>[-\w]+)/$', views.PostDV.as_view(), name='post_detail'),
 
     # Example: /blog/archive/
     path('archive/', views.PostAV.as_view(), name='post_archive'),
@@ -24,4 +28,5 @@ urlpatterns = [
 
     # Example: /blog/archive/today/
     path('archive/today/', views.PostTAV.as_view(), name='post_today_archive'),
+
 ]
