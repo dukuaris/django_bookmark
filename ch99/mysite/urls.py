@@ -15,11 +15,14 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include   # include 추가
+from mysite.views import HomeView # 추가
 
 # from bookmark.views import BookmarkLV, BookmarkDV  # 삭제
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    # shkim
+    path('', HomeView.as_view(), name='home'),  #추가
     path('bookmark/', include('bookmark.urls')),
     path('blog/', include('blog.urls')),
 
