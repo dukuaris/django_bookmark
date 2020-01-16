@@ -13,6 +13,7 @@ class AlbumAdmin(admin.ModelAdmin):
     inlines = (PhotoInline,)
     list_display = ('id', 'name', 'description')
 
+
 @admin.register(Photo)
 class PhotoAdmin(admin.ModelAdmin):
     list_display = ('id', 'title', 'upload_dt')

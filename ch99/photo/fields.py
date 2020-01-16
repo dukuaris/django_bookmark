@@ -26,7 +26,7 @@ class ThumbnailImageFieldFile(ImageFieldFile):
         img = Image.open(self.path)
         size = (self.field.thumb_width, self.field.thumb_height)
         img.thumbnail(size)
-        backgroung = Image.new('RGB', size, (255, 255, 255))
+        background = Image.new('RGB', size, (255, 255, 255))
         box = (int((size[0]-img.size[0])/2), int((size[1]-img.size[1])/2))
         background.paste(img, box)
         background.save(self.thumb_path, 'JPEG')
