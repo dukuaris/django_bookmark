@@ -37,10 +37,13 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'bookmark.apps.BookmarkConfig',  #추가
-    'blog.apps.BlogConfig', #추가
+
     'taggit.apps.TaggitAppConfig', #추가
     'taggit_templatetags2',  #추가
+    'widget_tweaks',
+
+    'bookmark.apps.BookmarkConfig',  #추가
+    'blog.apps.BlogConfig', #추가
     'photo.apps.PhotoConfig',  #추가
 ]
 
@@ -136,3 +139,5 @@ TAGGIT_LIMIT = 50  #추가
 
 DISQUS_SHORTNAME = 'pydjango-web-programming'
 DISQUS_MY_DOMAIN = 'http://127.0.0.1:8080'
+
+LOGIN_REDIRECT_URL = '/'
