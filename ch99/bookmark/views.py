@@ -1,4 +1,4 @@
-from django.views.generic import ListView, DetailView,
+from django.views.generic import ListView, DetailView
 from bookmark.models import Bookmark
 from django.views.generic import CreateView, UpdateView, DeleteView
 from django.contrib.auth.mixins import LoginRequiredMixin
