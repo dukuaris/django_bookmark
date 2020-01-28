@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'taggit.apps.TaggitAppConfig', #추가
     'taggit_templatetags2',  #추가
     'widget_tweaks',
+    'sorl.thumbnail', #추가
 
     'bookmark.apps.BookmarkConfig',  #추가
     'blog.apps.BlogConfig', #추가
